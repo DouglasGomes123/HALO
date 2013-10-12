@@ -104,10 +104,6 @@ public class MainActivity extends PreferenceActivity {
         mContext = this;
 
         ActionBar bar = getActionBar();
-        BitmapDrawable background = new BitmapDrawable(BitmapFactory
-                .decodeResource(getResources(), R.drawable.ab_background));
-        background.setTileModeX(Shader.TileMode.CLAMP);
-        bar.setBackgroundDrawable(background);
         bar.setDisplayShowTitleEnabled(false);
 
         mNotificationManager =
@@ -332,20 +328,18 @@ public class MainActivity extends PreferenceActivity {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         boolean firstRun = prefs.getBoolean(FIRST_RUN, true);
 
+        /**
         if (firstRun) {
             if (!Utils.isParanoidRom()) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-
                 builder.setMessage(R.string.no_pa_rom_content)
-                        .setTitle(R.string.no_pa_rom_title)
-                        .setPositiveButton(R.string.no_pa_rom_ok, null);
-
+                        .setTitle(R.string.no_rom_title)
+                        .setPositiveButton(R.string.no_rom_ok, null);
                 AlertDialog dialog = builder.create();
                 dialog.show();
             }
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean(FIRST_RUN, false).commit();
-        }
+        } **/
     }
-
 }

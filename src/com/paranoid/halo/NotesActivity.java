@@ -18,6 +18,7 @@
  */
 package com.paranoid.halo;
 
+import android.app.ActionBar;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
@@ -37,6 +38,9 @@ public class NotesActivity
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActionBar bar = getActionBar();
+        bar.setDisplayShowTitleEnabled(false);
+
         PreferenceScreen preferenceScreen = getPreferenceManager().createPreferenceScreen(this);
         setPreferenceScreen(preferenceScreen);
 

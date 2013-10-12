@@ -47,6 +47,7 @@ import java.util.List;
 
 public class Utils {
 
+    private static final String CARBON_PROPERTY = "ro.carbon";
     private static final String PA_PROPERTY = "ro.pa";
     private static final String ITEMS = "items";
 

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <style name="ShowcaseButton">
@@ -36,6 +37,14 @@
         <item name="sv_titleTextColor">#33B5E5</item>
         <item name="sv_detailTextColor">#FFFFFF</item>
         <item name="sv_backgroundColor">#C8000000</item>
+    </style>
+
+    <style name="action_bar_style" parent="android:Widget.Holo.ActionBar" >
+        <item name="android:background">@drawable/action_bar_bg</item>
+    </style>
+
+    <style name="text_view_style" parent="android:Widget.Holo.TextView">
+        <item name="android:fontFamily">sans-serif-condensed</item>
     </style>
 
 </resources>
